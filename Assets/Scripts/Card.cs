@@ -1,18 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[System.Serializable]
 
-public class Card : MonoBehaviour
+
+public class Card
 {
-    // Start is called before the first frame update
-    void Start()
+    public int id;
+    public int cardValue;
+
+    public Sprite displaySprite;
+    public Sprite cardBackSprite;
+
+    public Card()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public Card(int ID, int CardValue, Sprite[] DisplaySprites, Sprite CardBackSprite)
     {
-        
+        id = ID;
+        cardValue = CardValue;
+        displaySprite = DisplaySprites[id];
+        cardBackSprite = CardBackSprite;
     }
 }
